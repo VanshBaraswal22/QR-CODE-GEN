@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f3ef;
+    color: #171717;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* MAIN CARD */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+
+    background: #ffffff;
+
+    border: 1px solid #dedcd5;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.07);
+}
+
+
+/* HEADER */
+
+header {
+    height: 78px;
+
+    padding: 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e7e5df;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+
+    border: 2px solid #171717;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.logo-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border: 2px solid #171717;
+    border-radius: 2px;
+
+    top: 5px;
+    left: 5px;
+}
+
+.logo-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border: 2px solid #171717;
+    border-radius: 2px;
+
+    bottom: 5px;
+    right: 5px;
+}
+
+.header-text {
+    font-size: 13px;
+    color: #8a877f;
+}
+
+
+/* MAIN */
+
+main {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    min-height: 530px;
+}
+
+
+/* LEFT SIDE */
+
+.content {
+    padding: 55px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right: 1px solid #e7e5df;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #858179;
+
+    font-weight: 700;
+
+    margin-bottom: 17px;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 58px;
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 23px;
+}
+
+.description {
+    max-width: 500px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #737068;
+
+    margin-bottom: 34px;
+}
+
+
+/* FORM */
+
+label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    margin-bottom: 9px;
+}
+
+.input-group {
+    max-width: 570px;
+
+    display: flex;
+
+    border: 1px solid #d8d5cd;
+
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    background: #faf9f6;
+
+    transition: 0.2s;
+}
+
+.input-group:focus-within {
+    border-color: #171717;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 16px;
+
+    font-size: 14px;
+
+    color: #171717;
+}
+
+input::placeholder {
+    color: #aaa79f;
+}
+
+.input-group button {
+    border: none;
+
+    background: #171717;
+    color: white;
+
+    padding: 0 25px;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.input-group button:hover {
+    background: #333333;
+}
+
+.hint {
+    font-size: 11px;
+
+    color: #99968e;
+
+    margin-top: 10px;
+}
+
+
+/* RIGHT SIDE */
+
+.qr-section {
+    background: #faf9f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.qr-card {
+    width: 100%;
+    max-width: 330px;
+
+    text-align: center;
+}
+
+.qr-title {
+    font-size: 11px;
+
+    letter-spacing: 1.8px;
+
+    color: #858179;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* QR BOX */
+
+.qr-container {
+    width: 280px;
+    height: 280px;
+
+    margin: 0 auto 18px;
+
+    background: white;
+
+    border: 1px solid #dedcd5;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+#qrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#qrcode img {
+    display: block;
+    max-width: 100%;
+}
+
+.placeholder {
+    width: 145px;
+    height: 145px;
+
+    border: 1px dashed #c8c5bd;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #aaa79f;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* URL */
+
+.url-preview {
+    max-width: 280px;
+
+    margin: 0 auto 15px;
+
+    font-size: 11px;
+
+    color: #858179;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* DOWNLOAD */
+
+.download-btn {
+    display: none;
+
+    width: 280px;
+
+    padding: 12px;
+
+    border: 1px solid #171717;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #171717;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    background: #171717;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 55px;
+
+    border-top: 1px solid #e7e5df;
+
+    padding: 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    color: #99968e;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 15px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        border-right: none;
+        border-bottom: 1px solid #e7e5df;
+
+        padding: 45px 28px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .qr-section {
+        padding: 40px 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .header-text {
+        display: none;
+    }
+
+    .input-group {
+        flex-direction: column;
+
+        border: none;
+
+        background: transparent;
+
+        gap: 9px;
+
+        overflow: visible;
+    }
+
+    input {
+        width: 100%;
+
+        background: #faf9f6;
+
+        border: 1px solid #d8d5cd;
+
+        border-radius: 9px;
+
+        padding: 15px;
+    }
+
+    .input-group button {
+        padding: 14px;
+
+        border-radius: 9px;
+    }
+
+    .qr-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .download-btn {
+        width: 250px;
+    }
+
+    footer {
+        padding: 0 20px;
+    }
+}
