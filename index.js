@@ -13,6 +13,7 @@ inquirer
     const url = answers.url;
   var qr_svg = qr.image(url);
 qr_svg.pipe(fs.createWriteStream('qr_img.png'));
+
  
   })
   .catch((error) => {
