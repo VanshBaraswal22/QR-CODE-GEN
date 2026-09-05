@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QR Studio</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <span>QR Studio</span>
+        </div>
+
+        <span class="header-text">URL to QR</span>
+      </header>
+
+      <main>
+        <section class="content">
+          <p class="eyebrow">QR CODE GENERATOR</p>
+
+          <h1>
+            Turn your link<br />
+            into a QR code.
+          </h1>
+
+          <p class="description">
+            Enter a website URL and create a clean, scannable QR code in
+            seconds.
+          </p>
+
+          <form id="qrForm">
+            <label for="url"> Website URL </label>
+
+            <div class="input-group">
+              <input
+                type="url"
+                id="url"
+                placeholder="https://example.com"
+                autocomplete="off"
+                required
+              />
+
+              <button type="submit">Generate</button>
+            </div>
+
+            <p class="hint">Enter a complete website address.</p>
+          </form>
+        </section>
+
+        <section class="qr-section">
+          <div class="qr-card">
+            <p class="qr-title">YOUR QR CODE</p>
+
+            <div class="qr-container">
+              <div id="qrcode">
+                <div class="placeholder">
+                  QR code<br />
+                  will appear here
+                </div>
+              </div>
+            </div>
+
+            <p id="urlPreview" class="url-preview">No URL generated</p>
+
+            <button id="downloadBtn" class="download-btn">Download QR</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>QR Studio</span>
+        <span>Built with JavaScript</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
